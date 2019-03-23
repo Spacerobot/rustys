@@ -5,9 +5,10 @@ def do_discussion():
     discussion = input("Do I hear any discussion? (y/n)")
     discussion = discussion.lower()
     if discussion == 'y' or discussion == 'yes':
+        # todo: implement speaking stack
         pass
     elif discussion == 'n' or discussion == 'no':
-        pass
+        return
     else:
         print("Please enter yes or no")
         do_discussion()
@@ -18,6 +19,9 @@ motion_text = input('Motion is: ')
 seconded = input("Second?")
 
 do_discussion()
+
+# todo: add handling for motion to table
+# todo: add handling for call to question
 
 yay = input("Those in favor: ")
 nay = input("Those opposed: ")
