@@ -1,23 +1,23 @@
 import json
 
 
-def discussion():
-    disucssion = input("Do I hear any discussion? (y/n)")
-    disucssion = disucssion.lower()
-    if disucssion == 'y' or disucssion == 'yes':
+def do_discussion():
+    discussion = input("Do I hear any discussion? (y/n)")
+    discussion = discussion.lower()
+    if discussion == 'y' or discussion == 'yes':
         pass
-    elif disucssion == 'n' or disucssion == 'no':
+    elif discussion == 'n' or discussion == 'no':
         pass
     else:
         print("Please enter yes or no")
-        discussion()
+        do_discussion()
 
 
 motion_text = input('Motion is: ')
 
 seconded = input("Second?")
 
-discussion()
+do_discussion()
 
 yay = input("Those in favor: ")
 nay = input("Those opposed: ")
