@@ -1,5 +1,6 @@
 import json
 
+
 def yes_no_query():
     result = input("y/n | yes/no")
     result = result.lower()
@@ -13,16 +14,10 @@ def yes_no_query():
 
 
 def do_discussion():
-    discussion = input("Do I hear any discussion? (y/n)")
-    discussion = discussion.lower()
-    if discussion == 'y' or discussion == 'yes':
-        # todo: implement speaking stack
-        pass
-    elif discussion == 'n' or discussion == 'no':
-        return
-    else:
-        print("Please enter yes or no")
-        do_discussion()
+    # todo: implement speaking stack
+    # todo: add handling for motion to table
+    # todo: add handling for call to question
+    pass
 
 
 def do_motion(motion_text, motion_maker):
@@ -38,10 +33,10 @@ def do_motion(motion_text, motion_maker):
             "seconded": seconded
         }
 
-    do_discussion()
-
-    # todo: add handling for motion to table
-    # todo: add handling for call to question
+    print("Do I hear any questions or opposition")
+    discussion = yes_no_query()
+    if discussion:
+        do_discussion()
 
     yay = input("Those in favor: ")
     nay = input("Those opposed: ")
