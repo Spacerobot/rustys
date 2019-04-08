@@ -42,6 +42,9 @@ def do_motion(motion_text, motion_maker):
     nay = input("Those opposed: ")
     abstain = input("Those abstaining: ")
 
+    print("[confirm vote tally with note taker]")
+    input("Press any key to continue...")
+
     return {
         "motion text": motion_text,
         "motion maker": motion_maker,
