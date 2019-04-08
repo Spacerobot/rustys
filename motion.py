@@ -42,11 +42,9 @@ def do_motion(motion_text, motion_maker):
     nay = input("Those opposed: ")
     abstain = input("Those abstaining: ")
 
-    output_text = json.dumps({
+    return {
         "motion text": motion_text,
         "motion maker": motion_maker,
         "seconded": seconded,
         "result": (yay, nay, abstain)
-    })
-
-    return output_text
+    }
