@@ -35,6 +35,7 @@ def do_motion(motion_text, motion_maker):
     if discussion:
         do_discussion()
 
+    # todo confirm input type, warning on incorrect input and ask again
     yay = input("Those in favor: ")
     nay = input("Those opposed: ")
     abstain = input("Those abstaining: ")
